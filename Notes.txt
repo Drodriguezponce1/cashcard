@@ -1,0 +1,13 @@
+This is where I will write down any notes:
+
+Date: 5/13/25
+- Today we started to look into learning Spring Boot and found about spring.academy
+- we will be creating a cash card system:
+    * use Spring Boot, which is built on top of spring
+    * This project will be for a Web Application
+    * Allow parents to manage allowances
+    * use Spring Initializr
+        - Gradle - Groovy
+        - Java
+        - Dependencies (WIP as we go):
+            * Spring Web
