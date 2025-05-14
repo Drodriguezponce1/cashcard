@@ -11,3 +11,7 @@ Date: 5/13/25
         - Java
         - Dependencies (WIP as we go):
             * Spring Web
+
+- some annotations that I have seen being used
+    - JacksonTester is a convenience wrapper to the Jackson JSON parsing library. It handles serialization and deserialization of JSON objects.
+    - @Autowired is an annotation that directs Spring to create an object of the requested type.
