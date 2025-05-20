@@ -1,4 +1,5 @@
 This is where I will write down any notes:
+Spring.academy
 
 Date: 5/13/25
 - Today we started to look into learning Spring Boot and found about spring.academy
@@ -15,3 +16,33 @@ Date: 5/13/25
 - some annotations that I have seen being used
     - JacksonTester is a convenience wrapper to the Jackson JSON parsing library. It handles serialization and deserialization of JSON objects.
     - @Autowired is an annotation that directs Spring to create an object of the requested type.
+
+Date: 5/20/25
+- We first start out by understanding REST and what APIs down
+    * REST stands for Representational State Transfer
+        - Methods are kind of like CRUD methods
+        - POST: Create
+        - GET: Read
+        - PUT: Update
+        - DELETE: Delete
+        - I have noticed that we say "Resources" instead of entities
+- Java Spring notes:
+    - ANNOTATIONS ANNOTATIONS ANNOTATIONS!!!
+    - I noticed that there are a ton of annotations
+    - Annotiations so far:
+        * @RestController: this is used above the class defenition saying to Spring that this class is a REST RestController
+        * @GetMapping: this is for defining our GET method (@GetMapping("/cashcards/{requestedId}"))
+        * @PathVariable: this one is cool and can be used for our method below the @GetMapping (private CashCard findById(@PathVariable Long requestedId))
+    - Next, Spring provides a ResponseEntity class to send a response for the API call
+
+    code snippet: 
+    '''Java
+        @RestController
+        class CashCardController {
+        @GetMapping("/cashcards/{requestedId}")
+            private ResponseEntity<CashCard> findById(@PathVariable Long requestedId) {
+                CashCard cashCard = /* Here would be the code to retrieve the CashCard */;
+                return ResponseEntity.ok(cashCard);
+            }
+        }
+    '''
