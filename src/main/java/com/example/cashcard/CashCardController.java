@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/cashcards")
-class CashCardController {
+public class CashCardController {
 
     
     private final CashCardRepository cashCardRepository;
@@ -22,7 +22,7 @@ class CashCardController {
     }
 
     @GetMapping("/{requestedId}")
-    private ResponseEntity<CashCard> findById(@PathVariable("requestedId") Long requestedId) {
+    public ResponseEntity<CashCard> findById(@PathVariable("requestedId") Long requestedId) {
         // Long id = requestedId;
         if (requestedId.equals(99L)) {
             CashCard cashCard = new CashCard(99L, 123.45);
